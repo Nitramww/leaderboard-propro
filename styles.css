@@ -1,12 +1,31 @@
 body {
-    background-color: rgb(232, 188, 185);
+    background-color: rgb(34, 40, 49);
+    margin: 0;
+    padding: 0;
+    color: rgb(238, 238, 238)
+}
+header {
+    text-align: center;
+}
+nav {
+    width: 100%;
+    overflow: hidden;
+    background-color: #333;
+    padding: 3px;
+}
+nav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+nav a:hover {
+    background-color: #575757;
 }
 h1 {
-    color: rgb(174, 68, 90);
-}
-h2 {
-    color: rgb(67, 46, 84);
-}
-p {
-    color: rgb(75, 67, 118);
+    background-color: rgb(0, 173, 181);
+    margin: 0;
+    padding: 16px;
 }
