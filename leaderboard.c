@@ -147,11 +147,11 @@ int compareParticipants(const void *a, const void *b){
     const Participant *pa = (const Participant *)a;
     const Participant *pb = (const Participant *)b;
 
-    if (pa->score < pb->score){
+    if(pa->score < pb->score){
         return 1;
-    } else if (pa->score > pb->score){
+    }else if (pa->score > pb->score){
         return -1; 
-    } else{
+    }else{
         return 0;
     }
 }
