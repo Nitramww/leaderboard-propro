@@ -53,7 +53,7 @@ h1 {
     -webkit-text-stroke-width: 0.4px;
     -webkit-text-stroke-color: rgb(0, 0, 0);
     background-color: rgb(0, 173, 181);
-    border: 2px solid white;
+    border: 2.5px solid rgb(196, 196, 196);
     border-radius: 4px;
     display: flex;
     justify-content: space-between;
@@ -76,13 +76,19 @@ h1 {
 }
 .c_generated p:nth-child(1) .position {
     color: gold;
-    font-size: 40px;
 }
 .c_generated p:nth-child(2) .position {
     color: silver;
-    font-size: 34px;
 }
 .c_generated p:nth-child(3) .position {
     color: #cd7f32;
+}
+.c_generated p:nth-child(1) {
+    font-size: 40px;
+}
+.c_generated p:nth-child(2) {
+    font-size: 34px;
+}
+.c_generated p:nth-child(3) {
     font-size: 30px;
 }
