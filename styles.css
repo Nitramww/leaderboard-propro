@@ -2,22 +2,31 @@ body {
     background-color: rgb(34, 40, 49);
     margin: 0;
     padding: 0;
+    font-family: sans-serif;
+    overflow-x: hidden;
     color: rgb(238, 238, 238)
 }
 header {
     text-align: center;
+    color: azure;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 3px 3px 8px rgb(110, 108, 108);
 }
 nav {
     width: 100%;
     overflow: hidden;
     background-color: #333;
-    padding: 3px;
+    padding: 6px;
 }
 nav a {
     float: left;
     display: block;
     color: white;
     text-align: center;
+    font-size: 20px;
+    text-shadow: 1px 1px 3px rgb(143, 143, 143);
+    margin-left: 38px;
     padding: 14px 20px;
     text-decoration: none;
 }
@@ -28,4 +37,52 @@ h1 {
     background-color: rgb(0, 173, 181);
     margin: 0;
     padding: 16px;
+}
+.c_generated {
+    margin: 0 auto;
+    padding: 16px;
+    text-align: center;
+    display: block;
+}
+.c_generated p {
+    margin: 10px 30px;
+    padding: 16px;
+    font-weight: bold;
+    font-size: 24px;
+    text-shadow: 2px 2px 5px rgb(110, 108, 108);
+    -webkit-text-stroke-width: 0.4px;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+    background-color: rgb(0, 173, 181);
+    border: 2px solid white;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.c_generated p:hover {
+    transform: scale(1.04);
+}
+.c_generated p .position {
+    flex: 1;
+    text-align: left;
+}
+.c_generated p .name {
+    flex: 2;
+    text-align: center;
+}
+.c_generated p .score {
+    flex: 1;
+    text-align: right;
+}
+.c_generated p:nth-child(1) .position {
+    color: gold;
+    font-size: 40px;
+}
+.c_generated p:nth-child(2) .position {
+    color: silver;
+    font-size: 34px;
+}
+.c_generated p:nth-child(3) .position {
+    color: #cd7f32;
+    font-size: 30px;
 }
