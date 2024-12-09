@@ -5,27 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leaderboard</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Leaderboard</h1>
+        <h1>Leaderboards</h1>
+        <p class="subtitle">Sort scores and keep track of past events</p>
     </header>
     <nav>
-        <a href="index.html">Home</a>
+        <a href="./index.html">Home</a>
+        <a href="./about.html">About</a>
     </nav>
-    <div class="c_generated">
-        <p><span class="position">#1</span><span class="name">Lorelei Wagner</span><span class="score">32</span></p>
-        <p><span class="position">#2</span><span class="name">Vardenis Pavardenis</span><span class="score">25</span></p>
-        <p><span class="position">#3</span><span class="name">Hunter Padilla</span><span class="score">13</span></p>
-        <p><span class="position">#4</span><span class="name">Chris Hendricks</span><span class="score">12</span></p>
-        <p><span class="position">#5</span><span class="name">Aviana Good</span><span class="score">10</span></p>
-        <p><span class="position">#6</span><span class="name">Annabella Phillips</span><span class="score">9</span></p>
-        <p><span class="position">#7</span><span class="name">Andrew Hayden</span><span class="score">7</span></p>
-        <p><span class="position">#8</span><span class="name">Prince Morgan</span><span class="score">7</span></p>
-        <p><span class="position">#9</span><span class="name">Shiloh Crawford</span><span class="score">6</span></p>
-        <p><span class="position">#10</span><span class="name">Madden Kelley</span><span class="score">4</span></p>
-        <p><span class="position">#11</span><span class="name">Nicolas Stone</span><span class="score">2</span></p>
-        <p><span class="position">#12</span><span class="name">Catalina Martin</span><span class="score">1</span></p>
-    </div>
-</body>
+    <button class="add-event-btn">Add Your Event</button>
+    <section class="accordion">
+        <div class="tab">
+          <input type="checkbox" name="accordion-1" id="cb1">
+          <label for="cb1" class="tab__label">Darts Championship</label>
+          <div class="tab__content">
+            <div class="participants">
+                <p><span class="position">#1</span><span class="name">Lorelei Wagner</span><span class="score">32</span></p>
+                <p><span class="position">#2</span><span class="name">Vardenis Pavardenis</span><span class="score">25</span></p>
+                <p><span class="position">#3</span><span class="name">Hunter Padilla</span><span class="score">13</span></p>
+                <p><span class="position">#4</span><span class="name">Chris Hendricks</span><span class="score">12</span></p>
+                <p><span class="position">#5</span><span class="name">Aviana Good</span><span class="score">10</span></p>
+                <p><span class="position">#6</span><span class="name">Annabella Phillips</span><span class="score">9</span></p>
+                <p><span class="position">#7</span><span class="name">Andrew Hayden</span><span class="score">7</span></p>
+                <p><span class="position">#8</span><span class="name">Prince Morgan</span><span class="score">7</span></p>
+                <p><span class="position">#9</span><span class="name">Shiloh Crawford</span><span class="score">6</span></p>
+                <p><span class="position">#10</span><span class="name">Madden Kelley</span><span class="score">4</span></p>
+                <p><span class="position">#11</span><span class="name">Nicolas Stone</span><span class="score">2</span></p>
+                <p><span class="position">#12</span><span class="name">Thea Kaur</span><span class="score">1</span></p>
+                <p><span class="position">#13</span><span class="name">Dilan Hurst</span><span class="score">1</span></p>
+                <p><span class="position">#14</span><span class="name">Audrey Guzman</span><span class="score">1</span></p>
+                <p><span class="position">#15</span><span class="name">Cecilia Bentley</span><span class="score">1</span></p>
+                <p><span class="position">#16</span><span class="name">Kasen Hess</span><span class="score">1</span></p>
+                <p><span class="position">#17</span><span class="name">Damian Hill</span><span class="score">1</span></p>
+                <p><span class="position">#18</span><span class="name">Aubriella Lucas</span><span class="score">1</span></p>
+                <p><span class="position">#19</span><span class="name">Julien Bush</span><span class="score">1</span></p>
+                <p><span class="position">#20</span><span class="name">Catalina Martin</span><span class="score">1</span></p>
+                <p><span class="position">#21</span><span class="name">Michelle Valenzuela</span><span class="score">1</span></p>
+                <p><span class="position">#22</span><span class="name">James Huang</span><span class="score">1</span></p>
+                <p><span class="position">#23</span><span class="name">Jamari Gilbert</span><span class="score">1</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="tab">
+            <input type="checkbox" name="accordion-1" id="cb2">
+            <label for="cb2" class="tab__label">Gymnastics</label>
+            <div class="tab__content">
+              <div class="participants">
+                  <p><span class="position">#1</span><span class="name">Prince Morgan</span><span class="score">112</span></p>
+                  <p><span class="position">#2</span><span class="name">Marcos Ramirez</span><span class="score">97</span></p>
+                  <p><span class="position">#3</span><span class="name">Kasen Hess</span><span class="score">66</span></p>
+                  <p><span class="position">#4</span><span class="name">Chris Hendricks</span><span class="score">53</span></p>
+                  <p><span class="position">#5</span><span class="name">Aviana Good</span><span class="score">49</span></p>
+                  <p><span class="position">#6</span><span class="name">Annabella Phillips</span><span class="score">43</span></p>
+                  <p><span class="position">#7</span><span class="name">Andrew Hayden</span><span class="score">40</span></p>
+                  <p><span class="position">#8</span><span class="name">Lorelei Wagner</span><span class="score">38</span></p>
+                  <p><span class="position">#9</span><span class="name">Shiloh Crawford</span><span class="score">32</span></p>
+                  <p><span class="position">#10</span><span class="name">Madden Kelley</span><span class="score">28</span></p>
+                  <p><span class="position">#11</span><span class="name">Nicolas Stone</span><span class="score">24</span></p>
+                  <p><span class="position">#12</span><span class="name">Catalina Martin</span><span class="score">20</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="tab">
+            <input type="checkbox" name="accordion-1" id="cb3">
+            <label for="cb3" class="tab__label">Cycling</label>
+            <div class="tab__content">
+              <div class="participants">
+                  <p><span class="position">#1</span><span class="name">Zuri Turner</span><span class="score">64</span></p>
+                  <p><span class="position">#2</span><span class="name">Ameer Villa</span><span class="score">57</span></p>
+              </div>
+            </div>
+          </div>
+      </section>
+  </body>
 </html>
