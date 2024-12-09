@@ -34,7 +34,6 @@ nav {
     overflow: auto;
     background-color: #333;
     align-items: center;
-    padding: 8px;
 }
 
 nav a {
@@ -45,7 +44,8 @@ nav a {
     font-size: 20px;
     text-shadow: 1px 1px 3px rgb(0, 0, 0);
     margin-left: 12px;
-    padding: 14px 20px;
+    padding-top: 16px;
+    padding-bottom: 16px;
     text-decoration: none;
 }
 
@@ -225,6 +225,7 @@ h1 {
     background-color: #3e694b;
 }
 footer {
+    font-size: x-small;
     background-color: #333;
     color: #fff;
     text-align: center;
