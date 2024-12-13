@@ -113,7 +113,7 @@ int writeToBuffer(FILE *file, char *buffer){
     if(lastPos == currentPos){
         // participant's name and score is longer than BUFFER_SIZE - 1 characters
         // if no check --> posibility of infinite loop
-        // set some error code
+        // set some error code!!
         return 0;
     }
 
