@@ -62,7 +62,7 @@ int main(int argc, char *argv[]){
 
     // printing out results for testing purposes 
     for(int i = 0; i < numParticipants; ++i){
-        printf("Ranking: %u\t Name: %s\t Surname: %s\t Score: %.2lf\n", participant[i].position, participant[i].name, participant[i].surname, participant[i].score);
+        printf("Ranking: %-3u Name: %-20s Surname: %-20s Score: %-10.2lf\n", participant[i].position, participant[i].name, participant[i].surname, participant[i].score);
     }
 
     return 0;
