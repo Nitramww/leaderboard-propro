@@ -9,6 +9,7 @@
 typedef struct{
     unsigned position;
     char name[MAX_NAME_LENGTH];
+    char surname[MAX_NAME_LENGTH];
     double score;
 } Participant;
 
@@ -61,7 +62,7 @@ int main(int argc, char *argv[]){
 
     // printing out results for testing purposes 
     for(int i = 0; i < numParticipants; ++i){
-        printf("Ranking: %u\t Name: %s\t Score: %lf\n", participant[i].position, participant[i].name, participant[i].score);
+        printf("Ranking: %u\t Name: %s\t Surname: %s\t Score: %.2lf\n", participant[i].position, participant[i].name, participant[i].surname, participant[i].score);
     }
 
     return 0;
@@ -125,10 +126,12 @@ void extractNamesAndScores(char *buffer, Participant participant[], unsigned *nu
 
     while(line != NULL){
         char name[MAX_NAME_LENGTH];
+        char surname[MAX_NAME_LENGTH];
         double score;
 
-        if(sscanf(line, "%s %lf", name, &score) == 2){
+        if(sscanf(line, "%s%s%lf", name, surname, &score) == 3){
             strncpy(participant[*numParticipants].name, name, MAX_NAME_LENGTH - 1);
+            strncpy(participant[*numParticipants].surname, surname, MAX_NAME_LENGTH - 1);
             participant[*numParticipants].name[MAX_NAME_LENGTH - 1] = '\0';
 
             participant[*numParticipants].score = score;
