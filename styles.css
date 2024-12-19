@@ -249,30 +249,36 @@ p .about {
 #popup h2 {
     font-size: 30px;
 }
+.accordion .upload_file {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    border-color: white;
+}
 
 input[type="file"] {
-    background-color: #243E36; /* Background color */
-    color: #F1F7ED; /* Text color */
+    background-color: #243E36;
+    color: #F1F7ED;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    padding: 5px 10px; /* Padding for size */
-    font-size: 14px; /* Font size */
+    padding: 5px 10px;
+    font-size: 14px;
     margin-right: 16px;
     margin-left: 8px;
 }
 
 input[type="file"]::file-selector-button {
-    background-color: #3e694b; /* Background color for the button */
-    color: white; /* Text color for the button */
-    border: none; /* Remove border */
-    padding: 5px 10px; /* Padding */
+    background-color: #476e53;
+    color: white;
+    border: none;
+    padding: 5px 10px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    border-radius: 5px; /* Rounded corners */
-    font-size: 14px; /* Font size */
-    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
 }
 
 input[type="file"]::file-selector-button:hover {
-    background-color: #2e5038;
+    background-color: #2f503a;
 }
 
 .upload-btn {

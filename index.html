@@ -16,47 +16,25 @@
       <a href="./index.html">Home</a>
       <a href="./about.html">About</a>
     </nav>
-    <button popovertarget="popup" class="add-event-btn">Add Your Event</button>
+    <button popovertarget="popup" class="add-event-btn">How to use?</button>
     <div id="popup" popover>
-        <h2>Please upload your tournament</h2>
+        <h2>Upload your tournament</h2>
         <p></b>The name of the .txt file is interpereted as the tournament name!<br>The data does not have to be sorted by score</b></p>
         <p>Make sure it is in the format of:</p>
         <p>Name Surname Score<br>Name Surname Score</p>
-        <form action="/cgi-bin/process_file.exe" method="post" enctype="multipart/form-data">
+    </div>
+    <section class="accordion">
+        <form action="/cgi-bin/process_file.exe" class="upload_file" method="post" enctype="multipart/form-data">
             <label for="file">Select a .txt file:</label>
             <input type="file" id="file" name="file" accept=".txt" required>
             <button type="submit" class="upload-btn">Upload</button>
         </form>
-    </div>
-    <section class="accordion">
         <div class="tab">
           <input type="checkbox" name="accordion-1" id="cb1">
           <label for="cb1" class="tab__label">Darts Championship</label>
           <div class="tab__content">
             <div class="participants">
                 <p><span class="position">#1</span><span class="name">Lorelei Wagner</span><span class="score">32</span></p>
-                <p><span class="position">#2</span><span class="name">Vardenis Pavardenis</span><span class="score">25</span></p>
-                <p><span class="position">#3</span><span class="name">Hunter Padilla</span><span class="score">13</span></p>
-                <p><span class="position">#4</span><span class="name">Chris Hendricks</span><span class="score">12</span></p>
-                <p><span class="position">#5</span><span class="name">Aviana Good</span><span class="score">10</span></p>
-                <p><span class="position">#6</span><span class="name">Annabella Phillips</span><span class="score">9</span></p>
-                <p><span class="position">#7</span><span class="name">Andrew Hayden</span><span class="score">7</span></p>
-                <p><span class="position">#8</span><span class="name">Prince Morgan</span><span class="score">7</span></p>
-                <p><span class="position">#9</span><span class="name">Shiloh Crawford</span><span class="score">6</span></p>
-                <p><span class="position">#10</span><span class="name">Madden Kelley</span><span class="score">4</span></p>
-                <p><span class="position">#11</span><span class="name">Nicolas Stone</span><span class="score">2</span></p>
-                <p><span class="position">#12</span><span class="name">Thea Kaur</span><span class="score">1</span></p>
-                <p><span class="position">#13</span><span class="name">Dilan Hurst</span><span class="score">1</span></p>
-                <p><span class="position">#14</span><span class="name">Audrey Guzman</span><span class="score">1</span></p>
-                <p><span class="position">#15</span><span class="name">Cecilia Bentley</span><span class="score">1</span></p>
-                <p><span class="position">#16</span><span class="name">Kasen Hess</span><span class="score">1</span></p>
-                <p><span class="position">#17</span><span class="name">Damian Hill</span><span class="score">1</span></p>
-                <p><span class="position">#18</span><span class="name">Aubriella Lucas</span><span class="score">1</span></p>
-                <p><span class="position">#19</span><span class="name">Julien Bush</span><span class="score">1</span></p>
-                <p><span class="position">#20</span><span class="name">Catalina Martin</span><span class="score">1</span></p>
-                <p><span class="position">#21</span><span class="name">Michelle Valenzuela</span><span class="score">1</span></p>
-                <p><span class="position">#22</span><span class="name">James Huang</span><span class="score">1</span></p>
-                <p><span class="position">#23</span><span class="name">Jamari Gilbert</span><span class="score">1</span></p>
             </div>
           </div>
         </div>
@@ -66,17 +44,6 @@
             <div class="tab__content">
               <div class="participants">
                   <p><span class="position">#1</span><span class="name">Prince Morgan</span><span class="score">112</span></p>
-                  <p><span class="position">#2</span><span class="name">Marcos Ramirez</span><span class="score">97</span></p>
-                  <p><span class="position">#3</span><span class="name">Kasen Hess</span><span class="score">66</span></p>
-                  <p><span class="position">#4</span><span class="name">Chris Hendricks</span><span class="score">53</span></p>
-                  <p><span class="position">#5</span><span class="name">Aviana Good</span><span class="score">49</span></p>
-                  <p><span class="position">#6</span><span class="name">Annabella Phillips</span><span class="score">43</span></p>
-                  <p><span class="position">#7</span><span class="name">Andrew Hayden</span><span class="score">40</span></p>
-                  <p><span class="position">#8</span><span class="name">Lorelei Wagner</span><span class="score">38</span></p>
-                  <p><span class="position">#9</span><span class="name">Shiloh Crawford</span><span class="score">32</span></p>
-                  <p><span class="position">#10</span><span class="name">Madden Kelley</span><span class="score">28</span></p>
-                  <p><span class="position">#11</span><span class="name">Nicolas Stone</span><span class="score">24</span></p>
-                  <p><span class="position">#12</span><span class="name">Catalina Martin</span><span class="score">20</span></p>
               </div>
             </div>
           </div>
