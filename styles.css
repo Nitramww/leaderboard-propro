@@ -221,6 +221,7 @@ h1 {
 .add-event-btn:hover {
     background-color: #3e694b;
 }
+
 footer {
     font-size: x-small;
     background-color: #333;
@@ -231,7 +232,61 @@ footer {
     width: 100%;
     height: 2.5rem;
 }
-p .about{
+
+p .about {
     padding: 20px;
     font-size: 24px;
+}
+
+#popup {
+    text-align: center;
+    background-color: #333;
+    color:#F1F7ED;
+    border-radius: 3px;
+    width: 600px;
+    padding-bottom: 30px
+}
+#popup h2 {
+    font-size: 30px;
+}
+
+input[type="file"] {
+    background-color: #243E36; /* Background color */
+    color: #F1F7ED; /* Text color */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    padding: 5px 10px; /* Padding for size */
+    font-size: 14px; /* Font size */
+    margin-right: 16px;
+    margin-left: 8px;
+}
+
+input[type="file"]::file-selector-button {
+    background-color: #3e694b; /* Background color for the button */
+    color: white; /* Text color for the button */
+    border: none; /* Remove border */
+    padding: 5px 10px; /* Padding */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 5px; /* Rounded corners */
+    font-size: 14px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+input[type="file"]::file-selector-button:hover {
+    background-color: #2e5038;
+}
+
+.upload-btn {
+    background-color: #243E36;
+    color: white;
+    border: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    padding: 8px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.upload-btn:hover {
+    background-color: #3e694b;
 }

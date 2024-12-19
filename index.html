@@ -16,7 +16,18 @@
       <a href="./index.html">Home</a>
       <a href="./about.html">About</a>
     </nav>
-    <button class="add-event-btn">Add Your Event</button>
+    <button popovertarget="popup" class="add-event-btn">Add Your Event</button>
+    <div id="popup" popover>
+        <h2>Please upload your tournament</h2>
+        <p></b>The name of the .txt file is interpereted as the tournament name!<br>The data does not have to be sorted by score</b></p>
+        <p>Make sure it is in the format of:</p>
+        <p>Name Surname Score<br>Name Surname Score</p>
+        <form action="/cgi-bin/process_file.exe" method="post" enctype="multipart/form-data">
+            <label for="file">Select a .txt file:</label>
+            <input type="file" id="file" name="file" accept=".txt" required>
+            <button type="submit" class="upload-btn">Upload</button>
+        </form>
+    </div>
     <section class="accordion">
         <div class="tab">
           <input type="checkbox" name="accordion-1" id="cb1">
