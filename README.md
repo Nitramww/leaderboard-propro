@@ -7,7 +7,7 @@ Group project for ProPro 2024.
 
 ## TODO
 - [ ] Clean up HTML and CSS code
-- [ ] Add functionality to the "Add event" button
+- [x] Add an "Add event" button
 
 ## State of the C Module
 - [x] Processes the data coming through a POST request
