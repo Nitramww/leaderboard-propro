@@ -1,0 +1,45 @@
+sugeneravom.txt
+  1 James                Taylor                  892.00    
+  2 David                Martinez                813.00    
+  3 Emma                 Johnson                 772.00    
+  4 David                Clark                   670.00    
+  5 Charles              Lopez                   511.00    
+  6 Samuel               Williams                454.00    
+  7 David                Thompson                389.00    
+  8 Daniel               Lopez                   361.00    
+  9 Olivia               Harris                  298.00    
+ 10 John                 Martinez                218.00    
+ 11 Charles              Clark                   138.00    
+ 12 Henry                Harris                  8.00   
+   
+turnyro_pavadinimas.txt
+  1 Daniel               Smith                   564.00    
+  2 Henry                Lee                     556.00    
+  3 Michael              Thompson                530.00    
+  4 William              Thomas                  485.00    
+  5 Sarah                Doe                     129.00    
+  6 Michael              Jackson                  54.00     
+  7 Harper               Johnson                  31.00  
+   
+nu_va_kaip_grazu.txt
+  1 Alice                Thomas                   801.00
+  2 Harper               Gonzalez                 624.00
+  3 Evelyn               Williams                  33.00
+
+gereasarne.txt
+  1 Sarah                Wilson                   517.00
+  2 Sophia               Miller                   318.00
+  3 Charles              Johnson                  248.00
+  4 Mia                  Moore                    239.00
+
+chebra_veikiam.txt
+  1 ugnius               teis                 1000000000.00
+  2 emilija              san                    69420.23
+  3 domas                ber                     1234.00
+  4 martynas             martynas                   1.00
+
+paskutinis_test.txt
+  1 1234                 1234                    1234.00
+  2 hahaha               1324                    1234.00
+  3 ugniukas             1234                    1234.00
+

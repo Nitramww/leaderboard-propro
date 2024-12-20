@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Leaderboards</h1>
+        <p class="subtitle">Sort scores and keep track of past events</p>
+    </header>
+    <nav>
+      <a href="./index.html">Home</a>
+      <a href="./about.html">About</a>
+    </nav>
+    <button popovertarget="popup" class="add-event-btn">How to use?</button>
+    <div id="popup" popover>
+        <h2>Upload your tournament</h2>
+        <p></b>The name of the .txt file is interpreted as the tournament name!<br>The data does not have to be sorted by score</b></p>
+        <p>Make sure it is in the format of:</p>
+        <p>Name Surname Score<br>Name Surname Score</p>
+    </div>
+    <section class="accordion">
+        <form action="/cgi-bin/process_file.exe" class="upload_file" method="post" enctype="multipart/form-data">
+            <label for="file">Select a .txt file:</label>
+            <input type="file" id="file" name="file" accept=".txt" required>
+            <button type="submit" class="upload-btn">Upload</button>
+        </form>
+        <div class="tab">          <input type="checkbox" name="accordion-1" id="1">
+          <label for="1" class="tab__label">sugeneravom.txt</label>
+          <div class="tab__content">
+            <div class="participants">
+                  <p><span class="position">#1</span><span class="name">James Taylor</span><span class="score">                 892.00    </span></p>
+                  <p><span class="position">#2</span><span class="name">David Martinez</span><span class="score">               813.00    </span></p>
+                  <p><span class="position">#3</span><span class="name">Emma Johnson</span><span class="score">                772.00    </span></p>
+                  <p><span class="position">#4</span><span class="name">David Clark</span><span class="score">                  670.00    </span></p>
+                  <p><span class="position">#5</span><span class="name">Charles Lopez</span><span class="score">                  511.00    </span></p>
+                  <p><span class="position">#6</span><span class="name">Samuel Williams</span><span class="score">               454.00    </span></p>
+                  <p><span class="position">#7</span><span class="name">David Thompson</span><span class="score">               389.00    </span></p>
+                  <p><span class="position">#8</span><span class="name">Daniel Lopez</span><span class="score">                  361.00    </span></p>
+                  <p><span class="position">#9</span><span class="name">Olivia Harris</span><span class="score">                 298.00    </span></p>
+                  <p><span class="position">#10</span><span class="name">John Martinez</span><span class="score">               218.00    </span></p>
+                  <p><span class="position">#11</span><span class="name">Charles Clark</span><span class="score">                  138.00    </span></p>
+                  <p><span class="position">#12</span><span class="name">Henry Harris</span><span class="score">                 8.00   </span></p>
+            </div>
+          </div>
+        </div>
+        <div class="tab">          <input type="checkbox" name="accordion-1" id="2">
+          <label for="2" class="tab__label">turnyro_pavadinimas.txt</label>
+          <div class="tab__content">
+            <div class="participants">
+                  <p><span class="position">#1</span><span class="name">Daniel Smith</span><span class="score">                  564.00    </span></p>
+                  <p><span class="position">#2</span><span class="name">Henry Lee</span><span class="score">                    556.00    </span></p>
+                  <p><span class="position">#3</span><span class="name">Michael Thompson</span><span class="score">               530.00    </span></p>
+                  <p><span class="position">#4</span><span class="name">William Thomas</span><span class="score">                 485.00    </span></p>
+                  <p><span class="position">#5</span><span class="name">Sarah Doe</span><span class="score">                    129.00    </span></p>
+                  <p><span class="position">#6</span><span class="name">Michael Jackson</span><span class="score">                 54.00     </span></p>
+                  <p><span class="position">#7</span><span class="name">Harper Johnson</span><span class="score">                 31.00  </span></p>
+            </div>
+          </div>
+        </div>
+        <div class="tab">          <input type="checkbox" name="accordion-1" id="3">
+          <label for="3" class="tab__label">nu_va_kaip_grazu.txt</label>
+          <div class="tab__content">
+            <div class="participants">
+                  <p><span class="position">#1</span><span class="name">Alice Thomas</span><span class="score">                  801.00</span></p>
+                  <p><span class="position">#2</span><span class="name">Harper Gonzalez</span><span class="score">                624.00</span></p>
+                  <p><span class="position">#3</span><span class="name">Evelyn Williams</span><span class="score">                 33.00</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="tab">          <input type="checkbox" name="accordion-1" id="4">
+          <label for="4" class="tab__label">gereasarne.txt</label>
+          <div class="tab__content">
+            <div class="participants">
+                  <p><span class="position">#1</span><span class="name">Sarah Wilson</span><span class="score">                  517.00</span></p>
+                  <p><span class="position">#2</span><span class="name">Sophia Miller</span><span class="score">                  318.00</span></p>
+                  <p><span class="position">#3</span><span class="name">Charles Johnson</span><span class="score">                 248.00</span></p>
+                  <p><span class="position">#4</span><span class="name">Mia Moore</span><span class="score">                   239.00</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="tab">          <input type="checkbox" name="accordion-1" id="5">
+          <label for="5" class="tab__label">chebra_veikiam.txt</label>
+          <div class="tab__content">
+            <div class="participants">
+                  <p><span class="position">#1</span><span class="name">ugnius teis</span><span class="score">                1000000000.00</span></p>
+                  <p><span class="position">#2</span><span class="name">emilija san</span><span class="score">                   69420.23</span></p>
+                  <p><span class="position">#3</span><span class="name">domas ber</span><span class="score">                    1234.00</span></p>
+                  <p><span class="position">#4</span><span class="name">martynas martynas</span><span class="score">                  1.00</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="tab">          <input type="checkbox" name="accordion-1" id="6">
+          <label for="6" class="tab__label">paskutinis_test.txt</label>
+          <div class="tab__content">
+            <div class="participants">
+                  <p><span class="position">#1</span><span class="name">1234 1234</span><span class="score">                   1234.00</span></p>
+                  <p><span class="position">#2</span><span class="name">hahaha 1324</span><span class="score">                   1234.00</span></p>
+                  <p><span class="position">#3</span><span class="name">ugniukas 1234</span><span class="score">                   1234.00</span></p>
+            </div>
+          </div>
+        </div>
+      </section>
+  </body>
+</html>
