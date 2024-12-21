@@ -1,0 +1,207 @@
+body {
+    background-color: #f4f7f6;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    overflow-x: hidden;
+}
+
+header {
+    text-align: center;
+    color: #fff;
+    font-size: 40px;
+    font-weight: 700;
+    padding: 20px;
+    background-color: #2C6B40; 
+}
+
+header .subtitle {
+    font-size: 18px;
+    color: #e1e1e1;
+    margin-top: 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 15px 0;
+}
+
+nav a {
+    margin: 0 20px;
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #4CAF50;
+}
+
+.content {
+    width: 90%;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+button.add-event-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 20px;
+    background-color: #2C6B40; 
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button.add-event-btn:hover {
+    background-color: #248237;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #f1f7ed;
+    padding: 20px;
+    border-radius: 8px;
+    width: 60%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.popup h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.upload_file {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.upload_file label {
+    font-size: 16px;
+    color: #333;
+}
+
+.upload_file input[type="file"] {
+    margin-top: 10px;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.upload-btn {
+    background-color: #2C6B40; 
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.upload-btn:hover {
+    background-color: #248237;
+}
+
+.tabs {
+    margin-top: 20px;
+}
+
+.tab {
+    margin-bottom: 10px;
+}
+
+.tab input[type="checkbox"] {
+    display: none;
+}
+
+.tab__label {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    background-color: #2C6B40; 
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
+
+.tab__label:hover {
+    background-color: #248237;
+}
+
+.tab__content {
+    padding: 10px;
+    background-color: #f7f7f7;
+    border-radius: 6px;
+    margin-top: 10px;
+    display: none;
+}
+
+.tab input:checked ~ .tab__label {
+    background-color: #248237;
+}
+
+.tab input:checked ~ .tab__content {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 30px;
+    }
+
+    .content {
+        width: 95%;
+        padding: 15px;
+    }
+
+    button.add-event-btn {
+        font-size: 14px;
+        padding: 10px 16px;
+    }
+
+    .popup {
+        width: 80%;
+    }
+}
