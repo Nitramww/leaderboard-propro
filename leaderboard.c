@@ -22,15 +22,18 @@ typedef struct{
 void temp_file_create_with_uploaded_data(char *boundary, int contentLength, char *inputFilename);
 int  is_txt_file(char *fileName);
 int  write_to_buffer(FILE *file, char *buffer);
+
 void participant_extract_names_and_scores(char *buffer, Participant participant[], unsigned *participantCount);
 int  participant_compare(const void *a, const void *b);
 void participant_assign_positions(Participant participant[], unsigned participantCount);
+
 void html_write_before_data(FILE *htmlFile);
 void html_write_data(FILE *logFile, FILE *htmlFile);
 void html_write_after_data(FILE *htmlFile);
 void html_write_event_name(FILE *htmlFile, char *eventFilename, int id);
 void html_write_participant(FILE *htmlFile, char *pos, char *name, char *surname, char *score);
 void html_write_end_of_previous_event(FILE *htmlFile);
+void html_write_with_all_data(FILE *logFile, FILE *htmlFile);
 
 int main(){
     printf("Content-Type: text/html; charset=utf-8\r\n\r\n");
@@ -38,12 +41,14 @@ int main(){
 // ***** Processing the multipart data and writing the uploaded file's content to temp.txt *****
 
     char *contentType = getenv("CONTENT_TYPE");
+
     if(contentType == NULL){
         printf("Error: CONTENT_TYPE not found!\n");
         return 1;
     }
 
     char *contentLengthStr = getenv("CONTENT_LENGTH");
+
     if(contentLengthStr == NULL){
         printf("Error: CONTENT_LENGTH not found!\n");
         return 1;
@@ -88,6 +93,7 @@ int main(){
 
     if(participantCount > MAX_PARTICIPANTS){
         printf("Error: Maximum participant limit exceeded, the count must not be over %d!\n", MAX_PARTICIPANTS);
+        return 1;
     }
 
 // ***** Sorting the participants' data, assigning positions and appending the results to log.txt *****
@@ -130,14 +136,12 @@ int main(){
         return 1;
     }    
 
-    html_write_before_data(htmlFile);
-    html_write_data(logFile, htmlFile);
-    html_write_after_data(htmlFile);
+    html_write_with_all_data(logFile, htmlFile);
 
     fclose(htmlFile);
     fclose(logFile);
 
-    printf("Data has sucessfully been written, please navigate to main page.\n");
+    printf("A new leaderboard has successfuly been created! Please navigate back to main page.\n");
 
     return 0;
 }
@@ -172,30 +176,28 @@ void temp_file_create_with_uploaded_data(char *boundary, int contentLength, char
     }
 
     fileStart = strstr(buffer, "text/plain");
-    if(fileStart){
-        fileStart += 12;    // move to the beginning of file's content
-        fileEnd = strstr(fileStart, boundary);
-        fileEnd -= 2;       // move to the end of file's content
-        if(fileEnd){
-            *fileEnd = '\0';
-        }
-    }
-    else{
+
+    if(fileStart == NULL){
         printf("Error: File content not found!\n");
         return;
     }
 
-    outputFile = fopen(tempFilename, "w");
-    if(outputFile){
-        fprintf(outputFile, "%s\n", fileStart);
-        fclose(outputFile);
-
-        printf("Error: File uploaded and temp.txt has sucessfully been appended with the uploaded file's content!\n");
+    fileStart += 12;    // move to the beginning of file's content
+    fileEnd = strstr(fileStart, boundary);
+    fileEnd -= 2;       // move to the end of file's content
+    if(fileEnd){
+        *fileEnd = '\0';
     }
-    else{
+
+    outputFile = fopen(tempFilename, "w");
+
+    if(outputFile == NULL){
         printf("Error: Could not open temp.txt!\n");
         return;
     }
+
+    fprintf(outputFile, "%s\n", fileStart);
+    fclose(outputFile);
 }
 
 int is_txt_file(char *fileName){
@@ -206,6 +208,7 @@ int is_txt_file(char *fileName){
     }
 
     char *extension = &fileName[length - 4];
+
     if(strcmp(extension, ".txt") != 0){
         return 0;
     }
@@ -396,5 +399,11 @@ void html_write_after_data(FILE *htmlFile){
       "  </body>\n"
       "</html>\n"
     );
+}
+
+void html_write_with_all_data(FILE *logFile, FILE *htmlFile){
+    html_write_before_data(htmlFile);
+    html_write_data(logFile, htmlFile);
+    html_write_after_data(htmlFile);
 }
 

@@ -43,3 +43,7 @@ paskutinis_test.txt
   2 hahaha               1324                    1234.00
   3 ugniukas             1234                    1234.00
 
+paskutinis_test_tikrai.txt
+  1 Irmantas             Radavicius                10.00
+  2 123                  123                        1.00
+
